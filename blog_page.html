@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog_style.css">
+    <title>Page</title>
+</head>      
+    <body>
+      <div class="scroll-indicator"></div>
+      <nav>
+        <div class="container">
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="Dokumentasi.html">Dokumentasi</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="nav-toggle"><span class=""></span></div>
+        </div>
+      </nav>
+        <header style="padding-top: 100px ;">
+          <h1><a href="#">#Project Euler</a></h1>
+          <h5>Bima Darmaja Suryatama</h5>
+          <hr>
+        </header>
+        <main>
+          <article>
+            <h2># euler project | Soal 1</h2>
+            <p class="date">1.28.2023</p>
+            <p>Di euler project memiliki soal sebagai berikut "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+              <u>Find the sum of all the multiples of 3 or 5 below 1000.</u>" 
+            </p>
+            <p>Untuk menyelesaikan masalah ini saya akan mengunakan python. Dari soal di atas hanya kelipatan 3 dan 5 saja yang akan di tambahkan. 
+              Dengan python kita bisa mengunakan if dan operator logika (or) sebagai dasar dari code dan menggunakan operator modulo % untuk memeriksa apakah suatu bilangan habis dibagi 3 atau 5 dan akan di tambahkan di variabel temp. 
+            </p>
+            <pre>
+              temp = 0 
+                if i % 3 == 0 or i % 5 == 0: 
+                temp += i
+            </pre>
+            <p>
+              Kondisi sudah selesai, sekarang kita lanjutkan ke langkah selanjutnya yaitu perulangan untuk menyelesaikan masalah di atas, sebagai berikut :
+            </p>
+            <pre>
+              tamp = 0 
+              for i in range(0,1000):
+                if i % 3 == 0 or i % 5 == 0: 
+                tamp += i
+
+              print(tamp)
+            </pre>
+            <p>Jika berhasil akan di dapat hasil tamp yaitu  233168 </p>
+            <p>Kesimpulan : Untuk memecahkan masalah ini, anda dapat menggunakan sebuah algoritma sederhana yang iterates atas semua angka kurang dari 1000,dan cek jika mereka dibagi oleh 3 atau 5  = 0 dan jika demikian, menambahkan mereka ke Tamp.</p>
+            <p>Dengan menggunakan perulangan for dan pengkondisian if sebagai dasar dan menggunakan operator modulo % untuk memeriksa apakah suatu bilangan habis dibagi 3 atau 5 dan akan di tambahkan di variabel temp.</p>
+          </article>
+          <hr>
+        </main>
+        <div id="container">
+          <div id="slider-container">
+            <span onclick="slideRight()" class="btn"></span>
+              <div id="slider">
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                </a>
+                </div>
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                  </a>
+                </div>
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                  </a></div>
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                  </a>
+                </div>
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                  </a>
+                </div>
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                  </a>
+                </div>
+                <div class="slide">
+                  <a href="http://">
+                    <img src="a12.png" alt="not found" srcset="">
+                    <p>#Project Ulier 2</p>
+                  </a>
+                </div>
+                <div class="slide"><span>8</span></div>
+                <div class="slide"><span>9</span></div>
+            </div>
+            <span onclick="slideLeft()" class="btn"></span>
+          </div>
+        </div>
+        <script src="nav_toggel.js"></script>
+        <script src="scroll-indikator.js"></script>
+        <script src="news_or_update.js"></script>
+    </body>
+</html>

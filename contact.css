@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: url('https://images.wallpaperscraft.com/image/circles_highlights_background_form_size_47438_2560x1600.jpg') no-repeat top center;
+    background-size: cover;
+    height:100%;
+    background-color: #252525;
+}
+
+/*------------------------------ Nav ----------------------------------------------------*/
+/*-------------------------------navbar-----------------------------------------------*/
+nav{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.129);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.129);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+nav .container .nav-links{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    top: -400px;
+    padding: 20px 0px;
+    transition: top 0.5s ease-in-out ;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+nav .container .nav-links.active{
+    top: 66px;
+}
+nav .container .nav-links ul{
+    list-style: none;
+    text-align: center;    
+}
+nav .container .nav-links ul li{
+    padding: 15px 0px;
+    cursor: pointer;
+}
+nav .container .nav-links ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+}
+nav .container .nav-links ul li:hover a{
+    letter-spacing: 2px;
+}
+nav .container .nav-toggle{
+    cursor: pointer;
+    z-index: 9999;
+}
+nav .container .nav-toggle span{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 30px;
+    transition: height 0.2s linear;
+}
+nav .container .nav-toggle span::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-image: linear-gradient(90deg,rgb(42, 42, 248),rgb(47, 221, 244));
+    height: 3px;
+    width: 30px;
+    top:-8px;
+    transform-origin: center;
+    transition: all 0.2s linear;
+}
+nav .container .nav-toggle span::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 30px;
+    top:8px;
+    transform-origin: center;
+    transition: all 0.3s linear;
+}
+nav .container .nav-toggle span.active{
+    height: 0;
+}
+nav .container .nav-toggle span.active::before{
+    transform: rotate(45deg);
+    top: -3px;
+}
+nav .container .nav-toggle span.active::after{
+    transform: rotate(-45deg);
+    top: -3px;
+}
+/*---------------------------- contac body ----------------------------------------------*/
+.container{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+.container-img{
+    width: 200px;
+}
+.container-img img{
+    width: 400px;
+}
+.contact-fome{
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+.input-class{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+.input-class, .msg{
+    width: 48%;
+}
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #41B5E6;
+    padding: 10px;
+    color: aqua;
+    width: 100%;
+}
+.msg textarea{
+    height: 200px;
+}
+::-webkit-input-placeholder{
+    color: aquamarine;
+}
+::-moz-input-placeholder{
+    color: aquamarine;
+}
+.btn{
+    background: #39b7dd;
+    text-align: center;
+    padding: 15px;
+    border-radius:  5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    box-shadow: 3px 3px 3px #888888;
+}
+msg,button:hover{
+    background-color: orange;
+    color: black;
+}
+@media screen and (max-width: 600px){
+    .contact-fome{
+        flex-direction: column;
+    }
+    .msg text-area{
+        height: 80px;
+    }
+    .input-class, .msg{
+        width: 100%;
+    }
+}
